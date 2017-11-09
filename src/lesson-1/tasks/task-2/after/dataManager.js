@@ -1,29 +1,29 @@
 let entityCollection = [];
 
 export function addEntity(opt) {
-    console.log("ADD ENTITY2COLLECTION::");
     entityCollection.push(opt);
 }
 
 export function getEntities() {
-    console.log("GETENTITIES");
+    return entityCollection;
 }
 
 export function getCount(){
-    console.log("GETCOUNT");
+    return entityCollection.length;
 }
 
-export function getEntityById(idx) {
-    console.log("GETENTITYBYID");
-    console.log("extract index:" + idx);
+export function getEntityById(idx){
+    return entityCollection.filter((item)=>{
+        return item.id === idx;
+    })[0];
 }
 
 export function getFirstEntity(){
-
+    return entityCollection[0];
 }
 
 export function getLastEntity(){
-
+    return entityCollection[entityCollection.length-1];
 }
 
 
