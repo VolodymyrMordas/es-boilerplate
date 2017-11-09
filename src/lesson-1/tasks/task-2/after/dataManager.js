@@ -25,8 +25,3 @@ export function getFirstEntity(){
 export function getLastEntity(){
     return entityCollection[entityCollection.length-1];
 }
-
-
-
-
-

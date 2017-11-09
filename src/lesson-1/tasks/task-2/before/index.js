@@ -3,7 +3,6 @@ import {
     getEntities,
     getCount,
     getEntityById,
-    getEntityById2,
     getFirstEntity,
     getLastEntity
 } from '../after/dataManager';
