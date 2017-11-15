@@ -4,7 +4,8 @@ import {
     getCount,
     getEntityById,
     getFirstEntity,
-    getLastEntity
+    getLastEntity,
+    filter
 } from '../after/dataManager';
 
 import Entity from '../after/entityManager';
@@ -14,7 +15,7 @@ const man = new Entity({
     id: 0,
     firstName: 'Tomas',
     lastName: 'Anderson',
-    age: 32,
+    age: 21,
     sex: 'male'
 });
 
@@ -23,7 +24,7 @@ const woman = new Entity({
     id: 1,
     firstName: 'Lisa',
     lastName: 'Black',
-    age: 18,
+    age: 19,
     sex: 'female'
 });
 
@@ -54,9 +55,9 @@ const first = getFirstEntity();
 // Get last entity
 const last = getLastEntity();
 
-// Print all entities
-console.log(all);
-
+// Filter entities by callback
 const filtered = filter(function (item) {
-    return item.age > 20 && item.sex === 'male'
-})
+    return item.sex === 'male' && item.age > 20;
+});
+
+console.log(filtered);
