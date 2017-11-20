@@ -8,10 +8,8 @@ const Timer = function() {
             if(typeof a !== 'number'){
                 throw Error('wrong value of init param. it should be number');
             }
-            time = {
-                minutes : a / 60,
-                seconds : a % 60
-            };
+
+            time = {minutes : Math.flor(a / 60), seconds : a % 60 };
 
             callback()
         },
