@@ -1,8 +1,6 @@
 import Timer from '../after';
 
-const timer = new Timer();
-
-timer.init(130, () => {
+const timer = new Timer(130, () => {
     console.log('Timer is configured.');
 });
 
